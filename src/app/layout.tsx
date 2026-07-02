@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
-import { Jost, Mrs_Saint_Delafield } from "next/font/google";
+import { Cinzel, Jost } from "next/font/google";
 import "./globals.css";
 
 const jost = Jost({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["300", "400", "500", "600"],
 });
 
-const script = Mrs_Saint_Delafield({
-  variable: "--font-script",
+const cinzel = Cinzel({
+  variable: "--font-display",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
-  title: "Yassyn | Fashion & Beauty Photographer",
+  title: "Yassyn Nizeyimana | Fashion & Beauty Photographer",
   description:
-    "Yassyn is a fashion and beauty photographer with a bold, graphic visual style.",
+    "Yassyn Nizeyimana is a fashion and beauty photographer with a bold, graphic visual style.",
 };
 
 export default function RootLayout({
@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jost.variable} ${script.variable} h-full antialiased`}
+      className={`${jost.variable} ${cinzel.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-black">{children}</body>
     </html>
   );
 }
