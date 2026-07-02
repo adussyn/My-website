@@ -1,27 +1,53 @@
+import Image from "next/image";
+import Sidebar from "@/components/Sidebar";
+
+// Column assignment mirrors a masonry layout: three independent stacks.
+const columns = [
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+  [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35],
+];
+
+function photoSrc(n: number) {
+  return `/photos/photo-${String(n).padStart(2, "0")}.svg`;
+}
+
 export default function Home() {
   return (
-    <div className="relative flex flex-1 items-center justify-center overflow-hidden bg-black">
-      {/* Ambient glow background */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-1/2 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-amber-400/20 via-fuchsia-500/10 to-transparent blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.08),_transparent_60%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
-      </div>
+    <div className="flex flex-1 flex-col bg-white">
+      <Sidebar />
 
-      <main className="relative z-10 flex flex-col items-center gap-6 px-6 text-center">
-        <span className="text-xs font-medium uppercase tracking-[0.4em] text-zinc-400">
-          Welcome
-        </span>
+      <main className="flex-1 px-4 py-6 sm:px-6 lg:ml-[300px] lg:px-10 lg:py-14">
+        <h1 className="sr-only">Yassyn | Fashion &amp; Beauty Photographer</h1>
 
-        <h1 className="text-balance bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-5xl font-semibold tracking-tight text-transparent sm:text-7xl">
-          Hello, I&apos;m Yassyn
-        </h1>
+        <div className="mx-auto flex max-w-[1400px] gap-2.5">
+          {columns.map((column, i) => (
+            <div key={i} className="flex flex-1 flex-col gap-2.5">
+              {column.map((n) => (
+                <a
+                  key={n}
+                  href="#"
+                  className="group relative block overflow-hidden"
+                >
+                  <Image
+                    src={photoSrc(n)}
+                    alt={`Portfolio placeholder ${n}`}
+                    width={534}
+                    height={800}
+                    className="h-auto w-full transition-opacity duration-300 group-hover:opacity-85"
+                    unoptimized
+                  />
+                </a>
+              ))}
+            </div>
+          ))}
+        </div>
 
-        <div className="mt-2 h-px w-24 bg-gradient-to-r from-transparent via-amber-400/70 to-transparent" />
-
-        <p className="max-w-md text-balance text-base text-zinc-500 sm:text-lg">
-          This page was crafted to test a single premium Next.js page.
-        </p>
+        <footer className="mt-16 pb-4 text-center">
+          <p className="text-[11px] font-light uppercase tracking-[0.25em] text-neutral-400">
+            &copy;2026 Yassyn Photography
+          </p>
+        </footer>
       </main>
     </div>
   );
