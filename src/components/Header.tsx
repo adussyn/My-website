@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
@@ -56,6 +57,17 @@ export default function Header({
           : "relative z-20 flex items-center justify-center border-b border-white/10 bg-black px-4 py-5"
       }
     >
+      {variant === "solid" && (
+        <Link href="/" aria-label="Home" className="absolute left-5 top-5">
+          <Image
+            src="/yassyn-logo.png"
+            alt="Yassyn Nizeyimana"
+            width={120}
+            height={120}
+            className="h-10 w-auto sm:h-12"
+          />
+        </Link>
+      )}
       <nav aria-label="Main">
         <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-x-8">
           {navItems.map((item) => (
