@@ -113,6 +113,34 @@ export default function Wedding() {
         </div>
       </div>
 
+      {/* We stand for */}
+      <div className="relative h-[80vh] w-full overflow-hidden">
+        <Image
+          src="/wedding-photos/wedding-stands-for.jpg"
+          alt="Bride and groom laughing, running together across a park"
+          fill
+          sizes="100vw"
+          className="object-cover grayscale"
+        />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 flex items-center justify-center px-6 sm:justify-end sm:px-16">
+          <div className="max-w-md text-center sm:text-left">
+            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-white/80 sm:text-xs">
+              We Stand For
+            </p>
+            <h2 className="mt-5 font-[family-name:var(--font-display)] text-3xl uppercase leading-tight tracking-[0.04em] text-white sm:text-4xl">
+              Every Moment, Beautifully Remembered
+            </h2>
+            <a
+              href="#contact"
+              className="mt-8 inline-block border border-white/70 px-8 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-white transition-colors hover:border-white hover:bg-white hover:text-black sm:text-xs"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Philosophy */}
       <div className="mx-auto max-w-2xl px-6 py-20 text-center sm:py-28">
         <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-white/50">
