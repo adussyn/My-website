@@ -116,14 +116,14 @@ export default function Home() {
 
       {/* Centered logotype */}
       <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-4">
-        <h1 className="text-center font-[family-name:var(--font-display)] font-normal leading-[0.82] text-white [text-shadow:0_2px_30px_rgba(0,0,0,0.45)]">
-          <span className="block text-[clamp(3.5rem,13vw,11rem)] tracking-[0.04em]">
-            YASSYN
-          </span>
-          <span className="mt-[-0.12em] block text-[clamp(1.9rem,7vw,6rem)] tracking-[0.18em]">
-            NIZEYIMANA
-          </span>
-        </h1>
+        <Image
+          src="/yassyn-logo.png"
+          alt="Yassyn Nizeyimana Photography"
+          width={1080}
+          height={1080}
+          priority
+          className="w-[clamp(16rem,55vw,34rem)] [filter:drop-shadow(0_2px_30px_rgba(0,0,0,0.45))]"
+        />
       </div>
     </div>
   );
