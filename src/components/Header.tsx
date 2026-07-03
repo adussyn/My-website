@@ -54,17 +54,17 @@ export default function Header({
       className={
         variant === "overlay"
           ? "absolute inset-x-0 top-0 z-20 flex items-center justify-center px-4 py-5"
-          : "relative z-20 flex items-center justify-center border-b border-white/10 bg-black px-4 py-5"
+          : "relative z-20 flex items-center justify-center border-b border-white/10 bg-black px-4 py-5 sm:min-h-[112px]"
       }
     >
       {variant === "solid" && (
-        <Link href="/" aria-label="Home" className="absolute left-5 top-5">
+        <Link href="/" aria-label="Home" className="absolute left-5 top-1/2 -translate-y-1/2">
           <Image
             src="/yassyn-logo.png"
             alt="Yassyn Nizeyimana"
-            width={120}
-            height={120}
-            className="h-10 w-auto sm:h-12"
+            width={200}
+            height={200}
+            className="h-16 w-auto sm:h-20"
           />
         </Link>
       )}
