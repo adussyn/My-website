@@ -76,6 +76,14 @@ const galleryPhotos = [
   "wedding-aisle-bride-walking",
 ];
 
+const couples = [
+  { names: "Kyra + Fabian", photo: "wedding-couple-window-portrait" },
+  { names: "Ayman + Umaima", photo: "wedding-ayman-umaima" },
+  { names: "Nasra + Egide", photo: "wedding-couple-field-walk" },
+  { names: "Jolie + Simon", photo: "wedding-jolie-simon" },
+  { names: "Laura + Romano", photo: "wedding-laura-romano" },
+];
+
 export default function Wedding() {
   return (
     <div className="min-h-dvh bg-black">
@@ -136,8 +144,40 @@ export default function Wedding() {
         ))}
       </div>
 
+      {/* Secure your date CTA */}
+      <div className="border-t border-white/10 bg-neutral-900 py-16 text-center">
+        <a
+          href="#contact"
+          className="inline-block border border-white/50 px-10 py-4 text-xs font-medium uppercase tracking-[0.25em] text-white/80 transition-colors hover:border-white hover:text-white"
+        >
+          Secure Your Date
+        </a>
+      </div>
+
+      {/* Real couples */}
+      <div className="border-t border-white/10 px-4 py-20 sm:py-28">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:grid-cols-5">
+          {couples.map((couple) => (
+            <div key={couple.names} className="text-center">
+              <div className="relative aspect-3/4 overflow-hidden">
+                <Image
+                  src={`/wedding-photos/${couple.photo}.jpg`}
+                  alt={couple.names}
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                  className="object-cover grayscale"
+                />
+              </div>
+              <p className="mt-4 font-[family-name:var(--font-display)] text-sm uppercase tracking-[0.1em] text-white">
+                {couple.names}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Contact */}
-      <section className="relative overflow-hidden border-t border-white/10">
+      <section id="contact" className="relative overflow-hidden border-t border-white/10">
         <div className="absolute inset-0">
           <Image
             src="/wedding-photos/wedding-bouquet-detail.jpg"
