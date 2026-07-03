@@ -97,17 +97,17 @@ export default function Wedding() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[50%_30%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/40" />
-        <div className="absolute inset-x-0 bottom-0 flex flex-col items-start px-6 pb-14 text-left sm:px-16 sm:pb-20">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/40" />
+        <div className="absolute inset-x-0 bottom-0 flex flex-col items-start px-6 pb-8 text-left sm:px-16 sm:pb-12">
           <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-white/80 sm:text-xs">
             Weddings
           </p>
-          <h1 className="mt-5 max-w-3xl font-[family-name:var(--font-display)] text-3xl uppercase leading-tight tracking-[0.04em] text-white sm:text-5xl">
+          <h1 className="mt-4 max-w-2xl font-[family-name:var(--font-display)] text-2xl uppercase leading-tight tracking-[0.04em] text-white sm:text-4xl">
             Your Wedding, Told As It Truly Felt
           </h1>
-          <p className="mt-5 text-[11px] uppercase tracking-[0.3em] text-white/70 sm:text-xs">
+          <p className="mt-4 text-[11px] uppercase tracking-[0.3em] text-white/70 sm:text-xs">
             Germany &middot; Worldwide
           </p>
         </div>
