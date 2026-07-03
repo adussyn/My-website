@@ -14,23 +14,12 @@ const tiles: Array<{
   photo: string;
 }> = [
   { title: "Editorial", category: "Fashion", photo: "photo-01.webp" },
-  { title: "Couture", category: "Fashion", photo: "photo-03.webp" },
   { title: "Campaign", category: "Fashion", photo: "photo-05.webp" },
-  { title: "Beauty", category: "Fashion", photo: "photo-06.webp" },
-  { title: "Night Out", category: "Fashion", photo: "photo-07.webp" },
-  { title: "After Party", category: "Fashion", photo: "photo-08.webp" },
   { title: "Street Style", category: "Fashion", photo: "photo-09.webp" },
-  { title: "Girls' Night", category: "Fashion", photo: "photo-10.jpg" },
-  { title: "Cover Story", category: "Fashion", photo: "photo-11.jpg" },
-  { title: "Tailored", category: "Fashion", photo: "photo-12.webp" },
-  { title: "Off Duty", category: "Fashion", photo: "photo-13.jpg" },
-  { title: "Muse", category: "Fashion", photo: "photo-14.webp" },
-  { title: "Tulle", category: "Fashion", photo: "photo-15.webp" },
-  { title: "Lookbook", category: "Fashion", photo: "photo-16.webp" },
-  { title: "Soirée", category: "Fashion", photo: "photo-17.webp" },
-  { title: "Duo", category: "Fashion", photo: "photo-18.webp" },
-  { title: "Just Married", category: "Weddings", photo: "photo-02.webp" },
-  { title: "Interiors", category: "Real Estate", photo: "photo-04.webp" },
+  { title: "Sport", category: "Fashion", photo: "photo-16.webp" },
+  { title: "Events", category: "Fashion", photo: "photo-08.webp" },
+  { title: "Wedding", category: "Weddings", photo: "photo-02.webp" },
+  { title: "Real Estate", category: "Real Estate", photo: "photo-04.webp" },
 ];
 
 export default function Portfolios() {
