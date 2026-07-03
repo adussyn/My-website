@@ -92,15 +92,15 @@ export default function Wedding() {
       {/* Hero */}
       <div className="relative h-[92vh] w-full overflow-hidden">
         <Image
-          src="/wedding-photos/wedding-hero-chateau.jpg"
-          alt="Bride and groom at a chateau, reflected in the water"
+          src="/wedding-photos/wedding-hero-aerial.jpg"
+          alt="Aerial view of bride and groom lying together on a pier"
           fill
           priority
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/50" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/40" />
+        <div className="absolute inset-x-0 bottom-0 flex flex-col items-start px-6 pb-14 text-left sm:px-16 sm:pb-20">
           <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-white/80 sm:text-xs">
             Weddings
           </p>
