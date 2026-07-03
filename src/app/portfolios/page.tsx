@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
 
 type Category = "Fashion" | "Weddings" | "Real Estate";
@@ -12,14 +13,15 @@ const tiles: Array<{
   title: string;
   category: Category;
   photo: string;
+  href: string;
 }> = [
-  { title: "Editorial", category: "Fashion", photo: "photo-01.webp" },
-  { title: "Campaign", category: "Fashion", photo: "photo-05.webp" },
-  { title: "Street Style", category: "Fashion", photo: "photo-09.webp" },
-  { title: "Sport", category: "Fashion", photo: "photo-16.webp" },
-  { title: "Events", category: "Fashion", photo: "photo-08.webp" },
-  { title: "Wedding", category: "Weddings", photo: "photo-02.webp" },
-  { title: "Real Estate", category: "Real Estate", photo: "photo-04.webp" },
+  { title: "Editorial", category: "Fashion", photo: "photo-01.webp", href: "#" },
+  { title: "Campaign", category: "Fashion", photo: "photo-05.webp", href: "#" },
+  { title: "Street Style", category: "Fashion", photo: "photo-09.webp", href: "#" },
+  { title: "Sport", category: "Fashion", photo: "photo-16.webp", href: "#" },
+  { title: "Events", category: "Fashion", photo: "photo-08.webp", href: "#" },
+  { title: "Wedding", category: "Weddings", photo: "photo-02.webp", href: "/wedding" },
+  { title: "Real Estate", category: "Real Estate", photo: "photo-04.webp", href: "#" },
 ];
 
 export default function Portfolios() {
@@ -52,9 +54,9 @@ export default function Portfolios() {
       {/* Portfolio grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {visible.map((tile) => (
-          <a
+          <Link
             key={tile.title}
-            href="#"
+            href={tile.href}
             className="group relative aspect-4/5 overflow-hidden"
           >
             <Image
@@ -70,7 +72,7 @@ export default function Portfolios() {
                 {tile.title}
               </h2>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
