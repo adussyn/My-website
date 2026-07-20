@@ -15,7 +15,7 @@ const tiles: Array<{
   photo: string;
   href: string;
 }> = [
-  { title: "Editorial", category: "Fashion", photo: "photo-01.webp", href: "#" },
+  { title: "Editorial", category: "Fashion", photo: "photo-01.webp", href: "/editorial" },
   { title: "Campaign", category: "Fashion", photo: "photo-05.webp", href: "#" },
   { title: "Street Style", category: "Fashion", photo: "photo-09.webp", href: "#" },
   { title: "Sport", category: "Fashion", photo: "photo-16.webp", href: "#" },
